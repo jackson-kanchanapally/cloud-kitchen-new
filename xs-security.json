@@ -1,0 +1,52 @@
+{
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.cloudKitchenWrite",
+      "description": "cloudKitchenWrite"
+    },
+    {
+      "name": "$XSAPPNAME.cloudKitchenRead",
+      "description": "cloudKitchen Read"
+    },
+    {
+      "name": "$XSAPPNAME.cloudKitchenDelete",
+      "description": "cloudKitchen delete"
+    },
+    {
+      "name": "$XSAPPNAME.cloudkitchenRead",
+      "description": "cloudkitchenRead"
+    },
+    {
+      "name": "$XSAPPNAME.cloudkitchenWrite",
+      "description": "cloudkitchenWrite"
+    },
+    {
+      "name": "$XSAPPNAME.cloudkitchenDelete",
+      "description": "cloudkitchenDelete"
+    }
+  ],
+  "attributes": [],
+  "role-templates": [
+    {
+      "name": "cloudKitchenAdmin",
+      "description": "Role for Administration of cloudKitchen",
+      "scope-references": [
+        "$XSAPPNAME.cloudKitchenWrite",
+        "$XSAPPNAME.cloudKitchenRead",
+        "$XSAPPNAME.cloudKitchenDelete"
+      ]
+    },
+    {
+      "name": "cloudKitchenRead",
+      "description": "Role for Administration of cloudKitchen",
+      "scope-references": [
+        "$XSAPPNAME.cloudKitchenRead"
+      ]
+    }
+  ],
+  "oauth2-configuration": {
+    "redirect-uris": [
+      "https://*.cfapps.us10-001.hana.ondemand.com/**"
+    ]
+  }
+}
